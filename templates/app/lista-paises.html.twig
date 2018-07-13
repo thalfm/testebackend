@@ -1,0 +1,23 @@
+{% extends '@layout/default.html.twig' %}
+
+{% block title %}Lista de Países{% endblock %}
+
+{% block content %}
+    <h1>Lista de Países</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">UF</th>
+                <th scope="col">País</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for pais in data %}
+            <tr>
+                <td>{{ pais.uf }}</td>
+                <td>{{ pais.nome }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
